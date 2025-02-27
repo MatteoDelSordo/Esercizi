@@ -1,16 +1,16 @@
-package Eserczio11;
+package Esercizio11;
 
-public class Rettangolo {
+public class RettangoloUnoUno {
 
     private int base;
     private int altezza;
 
 
-    public Rettangolo() {
+    public RettangoloUnoUno() {
     }
 
-    public Rettangolo(int altezza,
-                      int base) {
+    public RettangoloUnoUno(int altezza,
+                            int base) {
         this.altezza = altezza;
         this.base = base;
     }

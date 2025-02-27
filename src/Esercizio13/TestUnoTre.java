@@ -8,7 +8,7 @@ public class TestUnoTre {
         System.out.println(r1.getArea(r1.getBase(), r1.getAltezza()));
         String i = r1.getPoints();
         System.out.println(i);
-//        String r = r1.traslaStoRettangolo(-2, 22);
-//        System.out.println(r);
+        String r = r1.traslaStoRettangolo(-2, 22);
+        System.out.println(r);
     }
 }
