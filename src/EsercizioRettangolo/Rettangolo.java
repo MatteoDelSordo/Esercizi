@@ -5,6 +5,16 @@ import java.awt.geom.Rectangle2D;
 public class Rettangolo {
     /// Ogni lettera corrisponde a un vertice del rettangolo, la lettera singola è per le coordinate di x e quella
     /// numerata per le coordinate di y
+    /// Se un rettangolo ha come valori base 10 e altezza 5 risultera cosi
+    ///
+    ///  D (0,5) ------------------------- C (10,5)
+    ///     |                                   |
+    ///     |                                   |
+    ///     |                                   |
+    ///     |                                   |
+    ///  A (10,0)  ------------------------- B (0,10)
+    ///
+
     private double a, a1, b, b1, c, c1, d, d1;
     private double base, altezza, coordinatax1, coordinatax2, coordinatay1, coordinatay2;
 
