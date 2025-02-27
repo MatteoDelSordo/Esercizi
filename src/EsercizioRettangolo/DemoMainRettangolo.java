@@ -1,6 +1,6 @@
 package EsercizioRettangolo;
 
-public class DemoMain {
+public class DemoMainRettangolo {
     public static void main(String[] args) {
         Rettangolo r1 = new Rettangolo(25, 10);
         Rettangolo r2 = new Rettangolo(20, 9);
