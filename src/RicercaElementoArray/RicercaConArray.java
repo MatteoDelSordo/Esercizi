@@ -18,30 +18,35 @@ public class RicercaConArray {
         int meta = numbers.length / 2;
         // Qui controllo se il valore passato corrisponde con il primo indice o con l'ultimo in modo
         // da evitare di ciclare tutto l'array
-        if (k == numbers[inizio]) {
-            return 0;
-        } else if (k == numbers[fine]) {
-            return fine;
-        } else if (k > numbers[inizio] && k <= numbers[meta]) { //qui controllo dal secondo indice in poi spostando
-            // il valore di i da 0 a 1 ma ora che ci penso potevo farlo anche semplicemente aggiungendo +1 a inizio
-            for (int i = 1;
-                 i <= meta;
-                 i++) {
-                if (numbers[i] == k) {
-                    return i;
+        //Ho aggiunto il controllo per inizio e fine anche qui
+
+        if (k >= numbers[inizio] && k <= numbers[fine]) {
+            if (k == numbers[inizio]) {
+                return 0;
+            } else if (k == numbers[fine]) {
+                return fine;
+            } else if (k > numbers[inizio] && k <= numbers[meta]) { //qui controllo dal secondo indice in poi spostando
+                // il valore di i da 0 a 1 ma ora che ci penso potevo farlo anche semplicemente aggiungendo +1 a inizio
+                for (int i = 1;
+                     i <= meta;
+                     i++) {
+                    if (numbers[i] == k) {
+                        return i;
+                    }
+                }
+            } else if (k > numbers[meta] && k <= numbers[fine]) {//Stessa cosa di sopra ma partendo dalla posizione
+                // centrale dell array
+                for (int j = meta;
+                     j <= numbers[fine];
+                     j++) {
+                    if (numbers[j] == k) {
+                        return j;
+                    }
                 }
             }
-        } else if (k > numbers[meta] && k <= numbers[fine]) {//Stessa cosa di sopra ma partendo dalla posizione
-            // centrale dell array
-            for (int j = meta;
-                 j <= numbers[fine];
-                 j++) {
-                if (numbers[j] == k) {
-                    return j;
-                }
-            }
+            return -1;
         }
-        return -1;
+        return inizio;
     }
 
     public int getIndexConList(ArrayList<Integer> list,
