@@ -2,7 +2,7 @@ package EsecizioTotalizzabile;
 
 import java.util.List;
 
-public class SequenzaDiInteri implements Totalizzable {
+public class SequenzaDiInteri implements Totalizzable<Integer> {
 
     List<Integer> lista;
     int totale;

@@ -2,7 +2,7 @@ package EsecizioTotalizzabile;
 
 import java.io.Serializable;
 
-public interface Totalizzable  {
+public interface Totalizzable<T>  {
 
 public int getTotale();
 
