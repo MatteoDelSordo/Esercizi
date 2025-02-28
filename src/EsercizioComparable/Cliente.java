@@ -1,6 +1,4 @@
-package RicercaElementoArray;
-
-import lombok.Data;
+package EsercizioComparable;
 
 import java.util.Date;
 

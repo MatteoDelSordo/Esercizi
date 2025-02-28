@@ -1,4 +1,4 @@
-import RicercaElementoArray.Cliente;
+package EsercizioComparable;
 
 import java.util.*;
 
