@@ -1,5 +1,7 @@
 package EsecizioTotalizzabile;
 
+import EsecizioTotalizzabile.eccezioni.SequenzaDiInteriException;
+
 import java.util.List;
 
 public class SequenzaDiInteri implements Totalizzable<Integer> {
@@ -7,11 +9,15 @@ public class SequenzaDiInteri implements Totalizzable<Integer> {
     List<Integer> lista;
     int totale;
 
-    public SequenzaDiInteri(List<Integer> lista) {
+    public SequenzaDiInteri(List<Integer> lista) throws SequenzaDiInteriException {
+        if (lista.isEmpty()) {
+            throw new SequenzaDiInteriException("La lista è vuota");
+        }
         this.lista = lista;
     }
 
     public List<Integer> getLista() {
+
         return lista;
     }
 
@@ -20,7 +26,9 @@ public class SequenzaDiInteri implements Totalizzable<Integer> {
     }
 
     @Override
-    public int getTotale() {
+    public int getTotale() throws SequenzaDiInteriException {
+
+
         for (Integer i : lista) {
             this.totale = totale + i;
         }

@@ -1,11 +1,14 @@
 package EsecizioTotalizzabile;
 
+import EsecizioTotalizzabile.eccezioni.FraseException;
+import EsecizioTotalizzabile.eccezioni.SequenzaDiInteriException;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class TotalizzableDemo {
-    public static void main(String[] args) {
-        List<Integer>lista = new ArrayList<>();
+    public static void main(String[] args) throws SequenzaDiInteriException, FraseException {
+        List<Integer> lista = new ArrayList<>();
         lista.add(20);
         lista.add(10);
         lista.add(11);
@@ -13,7 +16,7 @@ public class TotalizzableDemo {
 
         List<String> parole = new ArrayList<>();
 
-        parole.add("10");
+        parole.add("10i");
         parole.add("10");
         parole.add("10");
 
@@ -21,8 +24,11 @@ public class TotalizzableDemo {
         System.out.println(s.getTotale());
 
         Frase f = new Frase(parole);
-        System.out.println(f.getTotale());
-
+        try {
+            System.out.println(f.getTotale());
+        } catch (FraseException fe) {
+            System.out.println("Non sono ammesse lettere");
+        }
 
 
     }
